@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "server_body_parser",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "4",
+    "socket.io": "^4.8.1"
+  }
+}
