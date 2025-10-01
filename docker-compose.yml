@@ -1,0 +1,14 @@
+version: '3.8'
+name: rewportal
+services:
+  server-body-parser:
+    build: .
+    ports:
+      - "3000:3000" # Maps host port 3000 to container port 3000
+    volumes:
+      - .:/app # Mounts the current directory to /usr/src/app in the container
+      - /app/node_modules # Prevents host's node_modules from overriding container's
+    command: node index.js
+    environment:
+      NODE_ENV: development # Example environment variable
+    restart: unless-stopped
