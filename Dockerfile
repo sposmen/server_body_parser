@@ -8,7 +8,7 @@ WORKDIR /app
 # This allows npm install to run efficiently by leveraging Docker's layer caching
 COPY package.json yarn.lock ./
 
-RUN yarn install --production
+RUN yarn install
 
 # Copy the rest of the application code to the working directory
 COPY . .

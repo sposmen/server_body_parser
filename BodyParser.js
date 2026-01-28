@@ -83,8 +83,8 @@ const onRequestError = (error) => console.error(error.message);
 const server = http.createServer((request, response) => {
   let body = [];
 
-  // If Main host is not requested it's not autorized
-  if(!['api-parser.jaime-giraldo.com:8888', 'localhost:8888'].includes(request.headers.host)){
+  // If Main host is not requested it's not authorized
+  if(!['api-parser.jaime-giraldo.com:8888', 'localhost:8888', 'server-body-parser:8888'].includes(request.headers.host)){
     response.statusCode = 404
     response.end('');
     return;
